@@ -4,7 +4,7 @@ import { MuckUpContainer } from "./components/muck-up.container";
 import { PersistContainer } from "./components/persist.container";
 
 const appRoutes: Routes = [
-  { path: "muck-up", component: MuckUpContainer },
+  { path: "", component: MuckUpContainer },
   { path: "persist", component: PersistContainer }
 ];
 

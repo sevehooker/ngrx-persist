@@ -5,12 +5,14 @@ export const initialState = <object[]>[
   { id: "2", val: 4, blah: "buh" }
 ];
 
-export function counterReducer(state = initialState, action: Actions) {
+export function reducer(state = initialState, action: Actions) {
   switch (action.type) {
     case ActionTypes.Push:
-      return state.push(action.data);
+      state.push(action.data);
+      return state;
     case ActionTypes.Pop:
-      return state.pop();
+      state.pop();
+      return state;
     case ActionTypes.Reset:
       return initialState;
     default:

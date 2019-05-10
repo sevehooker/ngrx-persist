@@ -1,12 +1,12 @@
-import { Component, Input, Output } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { mergeDeep } from "../helpers";
-import { EventEmitter } from "selenium-webdriver";
 
 @Component({
   selector: "persist-C",
   template: `
     <p>{{ mergeDeep(list) | json }}</p>
     <button click="save.emit">Save</button>
+    <a routerLink="/">Go</a>    
   `
 })
 export class PersistComponent {
